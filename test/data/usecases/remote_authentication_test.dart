@@ -78,7 +78,7 @@ main() {
 
   test('Should throw InvalidCredentialsError if Httpclint returns 401',
       () async {
-    mockHttpError(HttpError.anauthorized);
+    mockHttpError(HttpError.unauthorized);
 
     final future = sut.auth(params);
     expect(future, throwsA(DomainError.invalidCredentials));
